@@ -1,0 +1,112 @@
+{
+    "name": "DroneControls",
+    "maps": [
+        {
+            "name": "Drone",
+            "id": "be3f38c4-2910-4534-a0ad-f86723b6b2cf",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "d9c3d4d7-0365-4e10-9d4a-0a85251c894f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis_ControllerTouch",
+                    "id": "fb93cb70-df61-475e-b225-7f6ca8555d54",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f6e801da-d3fb-454e-87a6-b7cf001a13cc",
+                    "path": "<XRController>{LeftHand}/devicePosition/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus_Touch_Controllers",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c95d082c-1567-41fa-bee6-573dab1cc339",
+                    "path": "<XRController>{LeftHand}/devicePosition/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus_Touch_Controllers",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "9b5a2961-f5db-456f-ac97-65d2785fd7a7",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "8fd5e5b6-b3bb-4978-9d25-e43dc779ebbe",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8e04ec35-1aae-410a-8139-8298dd470f71",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Oculus_Touch_Controllers",
+            "bindingGroup": "Oculus_Touch_Controllers",
+            "devices": [
+                {
+                    "devicePath": "<OculusTouchController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
