@@ -9,7 +9,7 @@ namespace Drone
 
     public class DroneEngine : MonoBehaviour, IEngine
     {
-        private float inFlight = 1f;
+        protected float inFlight = 1f;
 
         [Header("Engine Properties")]
         [SerializeField] private float maxPower = 4f;
