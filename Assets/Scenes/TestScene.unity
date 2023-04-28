@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc10b2692de6954599110ea988f3b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weightInLbs: 1
+  weightInLbs: 5
   minMaxPitch: 30
   minMaxRoll: 30
   yawPower: 4
