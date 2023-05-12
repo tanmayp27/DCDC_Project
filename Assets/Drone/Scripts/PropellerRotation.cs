@@ -8,11 +8,15 @@ namespace Drone
 
     public class PropellerRotation : MonoBehaviour
     {
-        [SerializeField] private float rpm=3400f;
+        [SerializeField] private float rpm;
+        private float motorKv;
+        private float voltage;
         // Start is called before the first frame update
         void Start()
         {
-
+            motorKv = (float) ComponentList.MotorList[0]["Kv Value"];
+            voltage = (float)ComponentList.BatteryList[0]["Voltage"];
+            rpm = motorKv * voltage;
         }
 
         // Update is called once per frame
