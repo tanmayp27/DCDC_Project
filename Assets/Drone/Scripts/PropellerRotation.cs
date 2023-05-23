@@ -11,6 +11,8 @@ namespace Drone
         [SerializeField] private float rpm;
         private float motorKv;
         private float voltage;
+        private string compName="";
+        private int index;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,7 +24,7 @@ namespace Drone
         // Update is called once per frame
         void FixedUpdate()
         {
-               
+            
 
             transform.RotateAround(transform.position, Vector3.up, Time.deltaTime * rpm);
         }
