@@ -11,21 +11,21 @@ namespace Drone
         [SerializeField] private float rpm;
         private float motorKv;
         private float voltage;
-        private string compName="";
-        private int index;
+        //private string compName="";
+        private int index=0;
         // Start is called before the first frame update
         void Start()
         {
-            motorKv = (float) ComponentList.MotorList[0]["Kv Value"];
-            voltage = (float)ComponentList.BatteryList[0]["Voltage"];
-            rpm = motorKv * voltage;
+            
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            
-
+            index = ComponentList.indexSelected;
+            motorKv = (float)ComponentList.MotorList[index]["Kv Value"];
+            voltage = (float)ComponentList.BatteryList[index]["Voltage"];
+            rpm = motorKv * voltage;
             transform.RotateAround(transform.position, Vector3.up, Time.deltaTime * rpm);
         }
     }
