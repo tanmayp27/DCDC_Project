@@ -11,16 +11,21 @@ namespace Drone
     {
         protected float inFlight = 1f;
 
+        private int index = 0;
+
         [Header("Engine Properties")]
         [SerializeField] private float maxPower = 4f;
 
         void FixedUpdate()
         {
+            index = ComponentList.indexSelected;
             if (maxPower == 0f)
             {
                 inFlight = 0f;
             }
             else inFlight = 1f;
+
+            maxPower = ((float)ComponentList.MotorList[index]["Kv Value"]) / 2000f;
         }
 
         public void InitEngine()

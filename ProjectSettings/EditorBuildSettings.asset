@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WIP DRONE 1.unity
     guid: 83309d5c8c02fe24682fd93a0d81acec
+  - enabled: 0
+    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/HandGrabUseExamples.unity
+    guid: 509f8fa80c708b343a603a4771d35c85
+  - enabled: 0
+    path: Assets/Scenes/WIP DRONE 2.unity
+    guid: 2aa01c279dea86d4e888d25688f00ecf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4747be635d802864c83885d428c3d431, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 408d098c33ca66e4b97921b860ea759d, type: 2}
