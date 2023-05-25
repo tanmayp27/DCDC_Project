@@ -25,7 +25,7 @@ namespace Drone
             }
             else inFlight = 1f;
 
-            maxPower = ((float)ComponentList.MotorList[index]["Kv Value"]) / 2000f;
+            maxPower = ((float)ComponentList.MotorList[index]["Kv Value"]) * ((float)ComponentList.ESCList[index]["BEC Current"]) / 2000f;
         }
 
         public void InitEngine()

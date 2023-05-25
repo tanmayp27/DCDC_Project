@@ -13,12 +13,14 @@ namespace Drone
         public static List<Hashtable> ESCList = new List<Hashtable>();
         public static List<Hashtable> BatteryList = new List<Hashtable>();
 
-        public static int indexSelected;
+        public static int indexSelected=0;
 
 
         public void setIndex(int index)
         {
             indexSelected = index;
+
+            Debug.Log(indexSelected);
         }
         // Start is called before the first frame update
         void Start()
@@ -27,7 +29,7 @@ namespace Drone
             // 1
             Hashtable Motor = new Hashtable();
             Motor["Name"] = "iFlight Xing Nano X1103 8000kv";
-            Motor["Weight"] = 3.95f;
+            Motor["Weight"] = 39.5f;
             Motor["Kv Value"] = 8000f;
 
             MotorList.Add(Motor);
@@ -35,11 +37,12 @@ namespace Drone
             // 2
             Motor = new Hashtable();
             Motor["Name"] = "EMAX Emax 1104 5250KV Babyhawk";
-            Motor["Weight"] = 5.5f;
+            Motor["Weight"] = 55f;
             Motor["Kv Value"] = 5250f;
 
             MotorList.Add(Motor);
 
+            // 3
             Motor = new Hashtable();
             Motor["Name"] = "DYS Fire FPV Race Edition 2600KV Brushless Outrunner Motor";
             Motor["Weight"] = 32f;
@@ -47,15 +50,15 @@ namespace Drone
 
             MotorList.Add(Motor);
 
-            // 3 
+            // 4
             Motor = new Hashtable();
-            Motor["Name"] = "DYS Fire FPV Race Edition 2600KV Brushless Outrunner Motor";
+            Motor["Name"] = "DYS Fire FPV Race Edition 2400KV Brushless Outrunner Motor";
             Motor["Weight"] = 32f;
             Motor["Kv Value"] = 2600f;
 
             MotorList.Add(Motor);
 
-            // 4 
+            // 5 
             Motor = new Hashtable();
             Motor["Name"] = "MultiStar Elite 2306 2150KV CCW";
             Motor["Weight"] = 37.5f;

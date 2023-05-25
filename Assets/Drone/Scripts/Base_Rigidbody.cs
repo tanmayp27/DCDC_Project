@@ -10,9 +10,9 @@ namespace Drone
     {
 
         [Header("Rigidbody Properties")]
-        [SerializeField] private float weightInLbs = 1f;
+        [SerializeField] private float weightInGms = 1f;
 
-        const float lbsToKg = 0.454f;
+        //const float lbsToKg = 0.454f;
         protected float startDrag;
         protected float startAngularDrag;
         protected Rigidbody rb;
@@ -39,8 +39,8 @@ namespace Drone
                 return;
             }
 
-            weightInLbs = (float)ComponentList.MotorList[index]["Weight"] + (float)ComponentList.PropellerList[index]["Weight"];
-            rb.mass = weightInLbs * lbsToKg;
+            weightInGms = (float)ComponentList.MotorList[index]["Weight"] + (float)ComponentList.PropellerList[index]["Weight"] + 250f;
+            rb.mass = weightInGms/10f;
             HandlePhysics();
         }
 
