@@ -9,9 +9,11 @@ namespace Drone
 
     public class DroneEngine : MonoBehaviour, IEngine
     {
-        protected float inFlight = 1f;
+        protected bool inFlight = false;
 
         private int index = 0;
+
+        
 
         [Header("Engine Properties")]
         [SerializeField] private float maxPower = 4f;
@@ -19,11 +21,7 @@ namespace Drone
         void FixedUpdate()
         {
             index = ComponentList.indexSelected;
-            if (maxPower == 0f)
-            {
-                inFlight = 0f;
-            }
-            else inFlight = 1f;
+            
 
             maxPower = ((float)ComponentList.MotorList[index]["Kv Value"]) * ((float)ComponentList.ESCList[index]["BEC Current"]) / 2000f;
         }
@@ -40,7 +38,7 @@ namespace Drone
             Vector3 engineForce = Vector3.zero;
             
 
-            engineForce = inFlight* (transform.up * ((rb.mass * Physics.gravity.magnitude) + (input.Throttle * maxPower))) / 4f;  //4 is engine count. Must adapt incase of less engines. 
+            engineForce = (transform.up * ((rb.mass * Physics.gravity.magnitude) + (input.Throttle * maxPower))) / 4f;  //4 is engine count. Must adapt incase of less engines. 
             rb.AddForce(engineForce, ForceMode.Force);
         }
 

@@ -14,6 +14,7 @@ namespace Drone
         [SerializeField] private float yawPower = 4f;
         [SerializeField] private float lerpSpeed = 2f;
         private InputScript input;
+        
         private List<IEngine> engines = new List<IEngine>();
 
         private float finalPitch;
@@ -28,6 +29,8 @@ namespace Drone
         }
 
         
+
+
 
         protected override void HandlePhysics()
         {

@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/TestDebug.unity
+    guid: 04d22737794771145832c5b4a33de2f9
+  - enabled: 1
+    path: Assets/Scenes/Scene_TP_Collaboration.unity
+    guid: c6032f84da91ac244891a74eb6c04c4c
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: b9bbb9b75bc45ea44bdf8de3d2a837dc
   - enabled: 0
     path: Assets/Scenes/TestScene 1.unity
     guid: 2c9b4732013f6014cab6e09fba6687c4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_TP_DataImplementation.unity
     guid: 89035bd4e8e2a8943be022f97bc61b36
   m_configObjects:
